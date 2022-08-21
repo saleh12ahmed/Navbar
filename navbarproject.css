@@ -1,0 +1,104 @@
+*{
+  margin: 0;
+  padding:0;
+}
+
+body{
+  background: url(img2.jpg)
+}
+.navbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+}
+.navbar ul{
+  display: flex;
+  list-style: none;
+  margin: 20px 0px;
+}
+navbar ul li{
+  font-family: century;
+  font-size: 1.1;
+  font-weight: bold;
+}
+.navbar ul li a{
+  text-decoration: none;
+  color: white;
+  padding: 8px 25px;
+  transition: all .5s ease;
+}
+.navbar ul li a:hover{
+  background-color: white;
+  color: black;
+  box-shadow: 0 0 10px white;
+}
+section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ul{
+  text-align: center;
+}
+ul:hover li a{
+  opacity: 0;
+}
+ul li{
+  list-style: none;
+  margin: 14px 0;
+}
+ul h2{
+  color:white;
+  background: gray;
+  padding: 6px 15px;
+  border-radius: 20px;
+  display: inline-block;
+}
+ul h2:hover{
+  transform: scale(1.5);
+}
+ul li a{
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  background: gray;
+  padding: 6px 15px;
+  border-radius: 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  width: 130px;
+  transition: 0.5s;
+  position: relative;
+  z-index: 10;
+}
+
+ul li a:hover{
+  transform: scale(1.5);
+  background: darkmagenta;
+  opacity: 1;
+}
+ul li:after{
+  content: attr(data-text);
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  font-size:  80px;
+  font-weight: 900;
+  text-transform: uppercase;
+  opacity: 0;
+  letter-spacing: 50px;
+  pointer-events: none;
+  transition: 0.5s;
+
+}
+ul li:hover:after{
+  opacity: 0.5;
+  letter-spacing: 5px
+}
